@@ -119,7 +119,7 @@
     .taskboard td{padding:12px;border-top:1px solid var(--line);text-align:center;font-weight:850}
     .taskboard .left{text-align:left}
     .taskboard tr:nth-child(even) td{background:#f8fafc}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;color:white;font-size:.78rem;font-weight:900;margin:2px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;color:white;font-size:.78rem;font-weight:900;margin:2px;text-decoration:none}
     .teacher{background:#be123c}
     .worksheet{background:#334155}
     .reading{background:#1f4ed8}
@@ -187,6 +187,14 @@
     .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
     .linkchip{background:#e0f2fe;color:#075985;text-decoration:none;border:1px solid #bae6fd;border-radius:14px;padding:9px 11px;font-weight:900}
     .linkchip:hover{filter:brightness(.97);transform:translateY(-1px)}
+
+    .classroom-chip{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-width:150px;
+      white-space:nowrap;
+    }
     .linkchip.dark{background:#eef2ff;color:#3730a3;border-color:#c7d2fe}
     .linkchip.green{background:#dcfce7;color:#166534;border-color:#bbf7d0}
     .linkchip.orange{background:#ffedd5;color:#9a3412;border-color:#fed7aa}
@@ -261,6 +269,7 @@
       <a class="btn b-blue" href="#taskboard">Taskboard</a>
       <a class="btn b-teal" href="#book-setup">Book Setup</a>
       <a class="btn b-amber" href="#groups">Find Your Group</a>
+      <a class="btn b-blue" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Google Classroom</a>
       <button class="btn b-dark" onclick="stopReading()">Stop Read-to-Me</button>
     </div>
   </header>
@@ -268,7 +277,7 @@
   <main>
     <section class="panel mission" id="focus-note">
       <h2>This Week</h2>
-      <p class="small"><b>Text 1</b> is your first text. <b>Text 2</b> is your second text. Your printed Reading Reflection Summary sheet will be in your group box with your journal.</p>
+      <p class="small"><b>Text 1</b> is your first text. <b>Text 2</b> is your second text. Your printed Reading Reflection Summary sheet will be in your group box with your journal. Use the <a href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener"><b>Google Classroom link</b></a> to open the texts, slides, and any uploaded classroom resources.</p>
       <div class="readbar"><button class="mini play" onclick="speakElement('focus-note')">Read this</button><button class="mini stop" onclick="stopReading()">Stop</button></div>
     </section>
 
@@ -298,24 +307,24 @@
             <tr>
               <td class="left"><b>Group 2</b></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
-              <td><span class="tag reading">Text 1</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 1</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
-              <td><span class="tag reading">Text 2</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 2</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag worksheet">Spelling</span></td>
             </tr>
             <tr>
               <td class="left"><b>Group 3</b></td>
-              <td><span class="tag reading">Text 1</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 1</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
-              <td><span class="tag reading">Text 2</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 2</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
               <td><span class="tag worksheet">Spelling</span></td>
             </tr>
             <tr>
               <td class="left"><b>Group 4</b></td>
-              <td><span class="tag reading">Text 1</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 1</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
-              <td><span class="tag reading">Text 2</span><span class="tag slides">Slides</span></td>
+              <td><a class="tag reading" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Text 2</a><a class="tag slides" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Slides</a></td>
               <td><span class="tag teacher">Teacher</span><span class="tag worksheet">Book Work</span></td>
               <td><span class="tag worksheet">Spelling</span></td>
             </tr>
@@ -356,8 +365,8 @@
               <div class="box"><b>SC</b> I can blend sounds, track words, read simple sentences, and complete my worksheet carefully.</div>
             </div>
             <div class="task"><strong>When you are with the teacher</strong><ul><li>Teacher + worksheet.</li><li>Read, practise sounds, and complete your printed task.</li></ul></div>
-            <div class="task"><strong>When you are not with the teacher</strong><ul><li>Finish your worksheet first.</li><li>Then choose one activity below.</li></ul><div class="links"><a class="linkchip green" href="https://www.sunshineonline.co.nz/" target="_blank">Sunshine Online</a><a class="linkchip dark" href="https://www.getepic.com/" target="_blank">Epic</a><a class="linkchip orange" href="https://www.typingclub.com/" target="_blank">TypingClub</a><a class="linkchip green" href="https://www.phonicsbloom.com/" target="_blank">Phonics Bloom</a></div></div>
-            <div class="task"><strong>Printed sheets</strong><div class="links"><a class="linkchip" href="group1_week10_printed_workbook.pdf" target="_blank">Open Week 10 Workbook</a><a class="linkchip" href="group1_kakano_printed_sheets.pdf" target="_blank">Open Kākano Sheets</a></div></div>
+            <div class="task"><strong>When you are not with the teacher</strong><ul><li>Finish your worksheet first.</li><li>Then choose one activity below.</li></ul><div class="links"><a class="linkchip green" href="https://www.sunshineonline.co.nz/" target="_blank" rel="noopener">Sunshine Online</a><a class="linkchip dark" href="https://www.getepic.com/" target="_blank" rel="noopener">Epic</a><a class="linkchip orange" href="https://www.typingclub.com/" target="_blank" rel="noopener">TypingClub</a><a class="linkchip green" href="https://www.phonicsbloom.com/" target="_blank" rel="noopener">Phonics Bloom</a></div></div>
+            <div class="task"><strong>Printed sheets</strong><div class="links"><a class="linkchip dark" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Open Text + Slides in Google Classroom</a></div></div>
             <div class="readbar"><button class="mini play" onclick="speakElement('group1')">Read Group 1</button><button class="mini stop" onclick="stopReading()">Stop</button></div>
           </div>
         </article>
@@ -381,13 +390,13 @@
               <div class="text-card">
                 <h4>Text 1</h4>
                 <p class="text-title g2-title">Painted Hoe</p>
-                <div class="links"><a class="linkchip" href="painted_hoe_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group2_painted_hoe_slides.pptx" target="_blank">Open Slides</a></div>
-                <div class="audio-box"><b>Audio support</b><audio controls preload="none" src="Painted-Hoe.mp3" style="width:100%;margin-top:8px"></audio></div>
+                <div class="links"><a class="linkchip dark classroom-chip" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Google Classroom</a></div>
+                <div class="audio-box"><b>Audio support</b><br><span class="small">Press play to listen to Painted Hoe.</span><audio controls preload="none" src="Painted-Hoe.mp3" style="width:100%;margin-top:8px"></audio></div>
               </div>
               <div class="text-card">
                 <h4>Text 2</h4>
                 <p class="text-title g2-title">A Hoe!</p>
-                <div class="links"><a class="linkchip" href="a_hoe_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group2_a_hoe_slides.pptx" target="_blank">Open Slides</a></div>
+                <div class="links"><a class="linkchip dark classroom-chip" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Google Classroom</a></div>
               </div>
             </div>
             
@@ -414,12 +423,12 @@
               <div class="text-card">
                 <h4>Text 1</h4>
                 <p class="text-title g3-title">The Māori Pioneer Battalion</p>
-                <div class="links"><a class="linkchip" href="maori_pioneer_battalion_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group3_maori_pioneer_battalion_slides.pptx" target="_blank">Open Slides</a></div>
+                <div class="links"><a class="linkchip dark" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Open Text + Slides in Google Classroom</a></div>
               </div>
               <div class="text-card">
                 <h4>Text 2</h4>
                 <p class="text-title g3-title">Grey Angels</p>
-                <div class="links"><a class="linkchip" href="grey_angels_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group3_grey_angels_slides.pptx" target="_blank">Open Slides</a></div>
+                <div class="links"><a class="linkchip dark" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Open Text + Slides in Google Classroom</a></div>
               </div>
             </div>
             
@@ -446,12 +455,12 @@
               <div class="text-card">
                 <h4>Text 1</h4>
                 <p class="text-title g4-title">Ngā Pakanga o Aotearoa</p>
-                <div class="links"><a class="linkchip" href="nga_pakanga_o_aotearoa_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group4_nga_pakanga_slides.pptx" target="_blank">Open Slides</a></div>
+                <div class="links"><a class="linkchip dark" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Open Text + Slides in Google Classroom</a></div>
               </div>
               <div class="text-card">
                 <h4>Text 2</h4>
                 <p class="text-title g4-title">Underground Soldiers</p>
-                <div class="links"><a class="linkchip" href="underground_soldiers_text.pdf" target="_blank">Open Text</a><a class="linkchip dark" href="group4_underground_soldiers_slides.pptx" target="_blank">Open Slides</a></div>
+                <div class="links"><a class="linkchip dark" href="https://classroom.google.com/c/ODQ0NTY3MzM2Mzc1/m/ODU1MjQ2MjAzODIx/details" target="_blank" rel="noopener">Open Text + Slides in Google Classroom</a></div>
               </div>
             </div>
             
